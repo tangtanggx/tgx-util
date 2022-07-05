@@ -1,0 +1,119 @@
+.color-fn(@i,@name,@color){
+    .@{name}@{i}{
+        color: @color;
+      }
+
+    .bg-@{name}@{i}{
+      background-color: @color;
+    }
+}
+
+  
+.loop(@i,@name,@list) when (@i < (length(@list) + 1)) {
+    .color-fn(@i,@name,extract(@list, @i));
+    .loop(@i + 1,@name,@list);
+}
+
+
+@blue:blue;
+@blue1:blue;
+@blue2: #2885f0;
+@blue3: #29A1F7;
+@blue4: #2289cb;
+@blue5: #7986CA;
+@blue6: #7DB6EA;
+@blue7: #9FD5F1;
+@blue8: #AFD7F7;
+@blue9: blue;
+@blueList: @blue1,@blue2,@blue3,@blue4,@blue5,@blue6,@blue7,@blue8,@blue9;
+.loop(1,@blue,@blueList);
+
+@purple:purple;
+@purple1:purple;
+@purple2: #cc00ff;
+@purple3: purple;
+@purpleList: @purple1,@purple2,@purple3;
+.loop(1,@purple,@purpleList);
+
+
+@gray:gray;
+@gray1:#AEAEAE;
+@gray2: #e7e7e7;
+@gray3: #f7f7f7;
+@gray4:#786e6e;
+@gray5:#c5c5c5;
+@gray6:#f9f9f9;
+@gray7:#bbb;
+@gray8:#b5adad;
+@gray9:#7F7F7F;
+@gray10:#666;
+@gray11: #E6DCE7;
+@gray12:gray;
+@grayList: @gray1,@gray2,@gray3,@gray4,@gray5,@gray6,@gray7,@gray8,@gray9,@gray10,@gray11,@gray12;
+.loop(1,@gray,@grayList);
+
+
+@black:black;
+@black1:#333;
+@black2: #555555;
+@black3: #333;
+@black4: rgba(58, 48, 48, 0.71);
+@blackList: @black1,@black2,@black3,@black4;
+
+.loop(1,@black,@blackList);
+
+@white:white;
+@white1:#fff;
+@white2: #fdfdfd;
+@white3: #333;
+@whiteList: @white1,@white2,@white3;
+.loop(1,@white,@whiteList);
+
+
+
+@red:red;
+@red1:red;
+@red2: #f20;
+@red3: #fb521d;
+@red4:#f9624b;
+@redList: @red1,@red2,@red3,@red4;
+.loop(1,@red,@redList);
+
+@pink:pink;
+@pink1:pink;
+@pink2: #F1B5B5;
+@pink3: #EC808D;
+@pink4: pink;
+@pinkList: @pink1,@pink2,@pink3,@pink4;
+.loop(1,@pink,@pinkList);
+
+
+@yellow:yellow;
+@yellow1:yellow;
+@yellow2: #eed91b;
+@yellow3: yellow;
+@yellowList: @yellow1,@yellow2,@yellow3;
+.loop(1,@yellow,@yellowList);
+
+@orange:orange;
+@orange1:orange;
+@orange2: #ff7a00;
+@orange3: #CA937F;
+@orange4: orange;
+@orangeList: @orange1,@orange2,@orange3,@orange4;
+.loop(1,@orange,@orangeList);
+
+@green:green;
+@green1:green;
+@green2: #07c160;
+@green3: #67c23a;
+@green4: #49e23b;
+@greenList: @green1,@green2,@green3,@green4;
+.loop(1,@green,@greenList);
+
+
+
+// 页面转为黑白色
+.img-gray {
+    filter: grayscale(1);
+}
