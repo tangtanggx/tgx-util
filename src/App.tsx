@@ -14,11 +14,7 @@ function App() {
       <Route path="invoices" element={<Invoices />} /> */}
             </Routes>
         </BrowserRouter>
-        // <div className="App">
-        //   <header className="App-header">
-        //     <img src={logo} className="App-logo" alt="logo" />
-        //   </header>
-        // </div>
+
     );
 }
 
